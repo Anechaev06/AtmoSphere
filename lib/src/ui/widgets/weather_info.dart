@@ -8,7 +8,7 @@ class WeatherInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    IconData weatherIcon = Icons.wb_sunny; // Default to sunny
+    IconData weatherIcon = Icons.wb_sunny;
     return Column(
       children: [
         Icon(weatherIcon),

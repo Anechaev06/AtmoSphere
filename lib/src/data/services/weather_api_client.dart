@@ -14,13 +14,12 @@ class WeatherApiClient {
     String latitude = coordinates[0];
     String longitude = coordinates[1];
 
-    // Updated fields as per the Tomorrow.io documentation
     final Uri weatherUrl = Uri.parse('$baseUrl?location=$latitude,$longitude'
         '&fields=temperature,windSpeed,humidity,pressureSurfaceLevel'
         '&units=metric'
-        '&timesteps=1h' // Use 'current' for real-time data if needed
+        '&timesteps=1h'
         '&startTime=now'
-        '&endTime=nowPlus1h' // Adjust based on your needs
+        '&endTime=nowPlus1h'
         '&apikey=$apiKey');
 
     final response = await httpClient.get(weatherUrl);

@@ -8,7 +8,6 @@ class WeatherScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // You can also consider moving the FetchWeather event to a button press or initState if using StatefulWidget
     return Scaffold(
       appBar: AppBar(
         title: const Text('Weather App'),
@@ -26,7 +25,7 @@ class WeatherScreen extends StatelessWidget {
           } else if (state is WeatherError) {
             return const Center(child: Text('Failed to fetch weather'));
           }
-          return const SizedBox(); // Fallback empty widget
+          return const SizedBox();
         },
       ),
     );
